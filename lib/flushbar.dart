@@ -405,7 +405,8 @@ class _FlushbarState<K extends Object?> extends State<Flushbar<K>>
                       widget.positionOffset)
               : EdgeInsets.only(
                   top: MediaQuery.of(context).viewInsets.top +
-                      widget.positionOffset),
+                      widget.positionOffset,
+              left: MediaQuery.of(context).size.width - widget.maxWidth!),
           bottom: widget.flushbarPosition == FlushbarPosition.BOTTOM,
           top: widget.flushbarPosition == FlushbarPosition.TOP,
           left: false,
